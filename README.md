@@ -26,5 +26,5 @@ We included some data from February in our training set, which the model should 
 This could lead to a scenario where the model is inadvertently "peeking into the future" during training, potentially biasing its performance evaluation and leading to overly optimistic results.
 To rectify this, we would need to ensure that our training data strictly precedes our testing data in terms of chronological order, as this aligns with the real-world scenario where we predict future values based on past data.  In the first type of testing this was  not considered but in the second one (auto-regressive) the data are unseen from the model during the training and they are from the actual "future".
 
-*We found good performances of the autoregressive tests despite this problem with the first training (technically if the models had biases the autoregression results should be very bad). _I will train new models that follow conventions and use data with "time gaps" between training and training data._*
+**We found good performances of the autoregressive tests despite this problem with the first training (technically if the models had biases the autoregression results should be very bad). _I will train new models that follow conventions and use data with "time gaps" between training and training data._**
 
