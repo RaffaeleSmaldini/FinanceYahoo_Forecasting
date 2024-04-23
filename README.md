@@ -30,13 +30,26 @@ To rectify this, we would need to ensure that our training data strictly precede
 
 ## Installation
 To use my code, follow these steps:
-### Clone this repository
+### 1a. Clone this repository
 ```
 git clone https://github.com/RaffaeleSmaldini/FinanceYahoo_Forecasting.git
 ```
 ***OR***
-### Download this repository
-
+### 1b. Download this repository
+Download the repository and extract it.
+### 2. Install requirements.txt
+```
+pip install -r requirements.txt
+```
+**Make sure to run this command in the same directory where the requirements.txt file is located.**
+### 3. Install PyTorch CUDA
+This project uses CUDA, so we advice to install pytorch CUDA using **_https://pytorch.org/_** and following the site instructions;
+In our case we used the following command to install the CUDA version.: 
+```
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+``` 
+If you do not install CUDA version, you may need to modify the code to run cpu only.
+All the others modules/library are included in the requirments.txt.
 
 ## Models Usage
 You will find the different trained models in "models.rar", you will have to unzip in the same location. Make sure the models are in a *"models"* directory. To start the autoregression test you need to use *"run_testing.py"*; here you can find: 
