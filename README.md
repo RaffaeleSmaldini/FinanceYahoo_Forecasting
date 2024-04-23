@@ -29,14 +29,14 @@ To rectify this, we would need to ensure that our training data strictly precede
 **We found good performances of the autoregressive tests despite this problem with the first training (technically if the models had biases the autoregression results should be very bad). _I will train new models that follow conventions and use data with "time gaps" between training and training data._**
 
 ## Installation
-To use my code, follow these steps:
+To use my code, follow these steps (choose one between 1a and 1b):
 ### 1a. Clone this repository
 ```
 git clone https://github.com/RaffaeleSmaldini/FinanceYahoo_Forecasting.git
 ```
-***OR***
 ### 1b. Download this repository
 Download the repository and extract it.
+
 ### 2. Install requirements.txt
 ```
 pip install -r requirements.txt
