@@ -17,7 +17,7 @@ The primary focus was on discovering the optimal blend of "light models" (in par
 ***Although these models possess the capability to forecast beyond this timeframe, it's advised not to surpass lags/2 days to prevent potential declines in model accuracy (both in trend and metrics).***
 
 > [!NOTE]
->***You can find all the architectures in our .pdf file [Report 2023](reports/SMALDINI_ARDILLO_Report_IIB.pdf).***
+>***You can find all the architectures explained in our .pdf file [Report 2023](reports/SMALDINI_ARDILLO_Report_IIB.pdf).***
 
 It explains our testing, design process, and metrics for a deeper understanding of each of the models we considered.
 In the pdf file there are also several results of the autoregression test. I planned to put the different tests on a simplified table here on GitHub.
