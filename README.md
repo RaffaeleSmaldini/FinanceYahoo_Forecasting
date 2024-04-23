@@ -16,7 +16,11 @@ The primary focus was on discovering the optimal blend of "light models" (in par
 ***Although these models possess the capability to forecast beyond this timeframe, it's advised not to surpass lags/2 days to prevent potential declines in model accuracy (both in trend and metrics).***
 You can find all the architectures in our .pdf file. It explains our testing, design process, and metrics for a deeper understanding of each of the models we considered.
 In the pdf file there are also several results of the autoregression test. I planned to put the different tests on a simplified table here on GitHub.
-Our models simultaneously predict the values of [Open, High, Low, Close] and require the label of the company whose trend you wish to forecast (such as APPL, AMZN, GOOGL, MSFT). Each model undergoes training using all available data, excluding testing data. However, we are cognizant of a potential issue related to the training process: the utilization of training and prediction time lags (specifically, a single following day) not in chronological order. To elaborate, when predicting stock data, it's typical to utilize data from a time period preceding the testing data. In our case, the training and the first type of testing data do not follow this chronological ordering convention. The following is an example of the issue: 
+Our models simultaneously predict the values of [Open, High, Low, Close] and require the label of the company whose trend you wish to forecast (such as APPL, AMZN, GOOGL, MSFT). Each model undergoes training using all available data, excluding testing data. 
+> [!WARNING]
+>However, we are cognizant of a potential issue related to the training process: the utilization of training and prediction time lags (specifically, a single following day) not in chronological order. To elaborate, when predicting stock data, it's typical to utilize data from a time period preceding the testing data. >In our case, the training and the first type of testing data do not follow this chronological ordering convention.
+
+The following is an example of the issue: 
 >Suppose we have historical stock data for a company like Apple (APPL) for the month of January. We want to predict the stock prices for February.
 In a typical scenario with chronological ordering:
 We would train our model using historical data from January (e.g., from January 1st to January 28th).
@@ -75,6 +79,8 @@ ates.start_autoregression(data=test_data[lab], company=lab, autoregression_days=
 
 If you want to use different test data than the ones we use, you will have to download them from *https://finance.yahoo.com* and place them in the appropriate folders, modifying the names of the .csv files as required.
 
-## Please cite our work if you use it 
-----
+## PLEASE CITE OUR WORK :+1: 
+Please cite our work if you use it:
+```
+```
 
