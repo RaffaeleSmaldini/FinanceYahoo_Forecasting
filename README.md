@@ -89,6 +89,6 @@ If you want to use different test data than the ones we use, you will have to do
 
 If you use our work or code in your research, please cite our repository:
 
-[RaffaeleSmaldini/FinanceYahoo_Forecasting](https://github.com/RaffaeleSmaldini/FinanceYahoo_Forecasting)
-[github.com/MicheleArdillo](https://github.com/MicheleAdillo)
+1. [RaffaeleSmaldini/FinanceYahoo_Forecasting](https://github.com/RaffaeleSmaldini/FinanceYahoo_Forecasting)
+2. [github.com/MicheleArdillo](https://github.com/MicheleAdillo)
 
