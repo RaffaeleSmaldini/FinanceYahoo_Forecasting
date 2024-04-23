@@ -28,6 +28,16 @@ To rectify this, we would need to ensure that our training data strictly precede
 
 **We found good performances of the autoregressive tests despite this problem with the first training (technically if the models had biases the autoregression results should be very bad). _I will train new models that follow conventions and use data with "time gaps" between training and training data._**
 
+## Installation
+To use my code, follow these steps:
+### Clone this repository
+```
+git clone https://github.com/RaffaeleSmaldini/FinanceYahoo_Forecasting.git
+```
+***OR***
+### Download this repository
+
+
 ## Models Usage
 You will find the different trained models in "models.rar", you will have to unzip in the same location. Make sure the models are in a *"models"* directory. To start the autoregression test you need to use *"run_testing.py"*; here you can find: 
 ```
