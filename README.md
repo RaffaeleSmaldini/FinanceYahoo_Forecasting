@@ -80,8 +80,10 @@ ates.start_autoregression(data=test_data[lab], company=lab, autoregression_days=
 
 If you want to use different test data than the ones we use, you will have to download them from *https://finance.yahoo.com* and place them in the appropriate folders, modifying the names of the .csv files as required.
 
-## PLEASE CITE OUR WORK :+1: 
-Please cite our work if you use it:
+## Citing Our Work :+1: 
+
+If you use our work or code in your research, please cite our repository:
 ```
+[RaffaeleSmaldini/FinanceYahoo_Forecasting](https://github.com/RaffaeleSmaldini/FinanceYahoo_Forecasting)
 ```
 
