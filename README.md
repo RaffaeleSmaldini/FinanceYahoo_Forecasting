@@ -50,9 +50,11 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 ``` 
 If you do not install CUDA version, you may need to modify the code to run cpu only.
 All the others modules/library are included in the requirments.txt.
+### 4. Train models 
+All the code to train a model is located in *"main.py"*, if you want to solve *the problem described in the previous paragraphs* you will currently have to modify the code slightly.
 
-## Models Usage
-You will find the different trained models in "models.rar", you will have to unzip in the same location. Make sure the models are in a *"models"* directory. To start the autoregression test you need to use *"run_testing.py"*; here you can find: 
+## Autoregressive models usage
+You will find the different trained models in "models.rar", you will have to unzip in the same location (you can also use a model you train). Make sure the models are in a *"models"* directory. To start the autoregression test you need to use *"run_testing.py"*; here you can find: 
 ```
 ates = AutoTest(model_dir=["LARGE_ToM", "LARGE_BiLPET", "SMALL_ToM", "SMALL_EBiL"], model_type=["ToM", "BiLPET", "ToM", "EBiL"])
 ates.start_autoregressive_bagging(data=test_data[lab], company=lab, autoregression_days=7, plot_all_graphs=False)
@@ -71,5 +73,8 @@ ates.start_autoregression(data=test_data[lab], company=lab, autoregression_days=
 ```
 *It uses a single model to predict the values for the next 7 days (since autoregression_days=7 in this case).*
 
+If you want to use different test data than the ones we use, you will have to download them from *https://finance.yahoo.com* and place them in the appropriate folders, modifying the names of the .csv files as required.
 
+## Please cite our work if you use it 
+----
 
