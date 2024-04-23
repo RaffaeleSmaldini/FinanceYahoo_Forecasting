@@ -18,7 +18,7 @@ You can find all the architectures in our .pdf file. It explains our testing, de
 In the pdf file there are also several results of the autoregression test. I planned to put the different tests on a simplified table here on GitHub.
 Our models simultaneously predict the values of [Open, High, Low, Close] and require the label of the company whose trend you wish to forecast (such as APPL, AMZN, GOOGL, MSFT). Each model undergoes training using all available data, excluding testing data. 
 > [!WARNING]
->However, we are cognizant of a potential issue related to the training process: the utilization of training and prediction time lags (specifically, a single following day) not in chronological order. To elaborate, when predicting stock data, it's typical to utilize data from a time period preceding the testing data. >In our case, the training and the first type of testing data do not follow this chronological ordering convention.
+>However, we are cognizant of a potential issue related to the training process: the utilization of training and prediction time lags (specifically, a single following day) not in chronological order. To elaborate, when predicting stock data, it's typical to utilize data from a time period preceding the testing data. In our case, the training and the first type of testing data do not follow this chronological ordering convention.
 
 The following is an example of the issue: 
 >Suppose we have historical stock data for a company like Apple (APPL) for the month of January. We want to predict the stock prices for February.
