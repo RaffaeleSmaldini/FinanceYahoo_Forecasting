@@ -28,3 +28,25 @@ To rectify this, we would need to ensure that our training data strictly precede
 
 **We found good performances of the autoregressive tests despite this problem with the first training (technically if the models had biases the autoregression results should be very bad). _I will train new models that follow conventions and use data with "time gaps" between training and training data._**
 
+## Models Usage
+You will find the different trained models in "models.rar", you will have to unzip in the same location. Make sure the models are in a *"models"* directory. To start the autoregression test you need to use *"run_testing.py"*; here you can find: 
+```
+ates = AutoTest(model_dir=["LARGE_ToM", "LARGE_BiLPET", "SMALL_ToM", "SMALL_EBiL"], model_type=["ToM", "BiLPET", "ToM", "EBiL"])
+ates.start_autoregressive_bagging(data=test_data[lab], company=lab, autoregression_days=7, plot_all_graphs=False)
+```
+*"start_autoregressive_begging"* method will predict for the same test lags, based on *"autoregressive_days"* set value, the different values for each model and then mediate them based on model presence. 
+
+```
+ates = AutoTest(model_dir=["45LAG_SMALL_ToM", "45LAG_SMALL_BiL", "45LAG_SMALL_ToM"], model_type=["ToM", "BiL", "ToM"])
+ates.start_autoregressive_bagging(data=test_data[lab], company=lab, autoregression_days=7, plot_all_graphs=False)
+```
+*In the same way as the previous one, but uses data with a greater number of lags.*
+
+```
+ates = AutoTest(model_dir="45LAG_SMALL_BiL", model_type="BiL")
+ates.start_autoregression(data=test_data[lab], company=lab, autoregression_days=7)
+```
+*It uses a single model to predict the values for the next 7 days (since autoregression_days=7 in this case).*
+
+
+
